@@ -42,6 +42,6 @@ def resposta(lista_paginas):
         except:
             pass
     try:
-        analisar(f"Você é um analisador de produtos e sua função é me ajudar a selecionar o melhor local de compra e o melhor produto a ser selecionado. Te apresentarei uma lista de informações referentes a um produto, vindas de sites e vendedores diferentes. Por favor, retorne para mim a sua avaliação  de qual é o produto mais vantajoso o vendedor desses produto e o site no qual ele está hospedado bem como seu link de acesso. Além disso, elabore uma tabela com os demais produtos e vendedores, elencando-os do mais barato para o mais caro. Segue a lista: {lista_infos}")
+        return analisar(f"Você é um analisador de produtos e sua função é me ajudar a selecionar o melhor local de compra e o melhor produto a ser selecionado. Te apresentarei uma lista de informações referentes a um produto, vindas de sites e vendedores diferentes. Por favor, retorne para mim a sua avaliação  de qual é o produto mais vantajoso o vendedor desses produto e o site no qual ele está hospedado bem como seu link de acesso. Além disso, elabore uma tabela com os demais produtos e vendedores, elencando-os do mais barato para o mais caro. Segue a lista: {lista_infos}")
     except:
         print("Não foi possível realizar a análise dos produtos")
