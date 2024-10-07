@@ -6,7 +6,7 @@ from time import sleep
 def pesquisar_produto(produto):
         #pesquisa = produto.split(" ")
         #url = f"https://www.bing.com/search?q={pesquisa[0]}+{pesquisa[1]}+{pesquisa[2]}"
-        url_ia = analisar(f"Por favor, crie uma url de pesquisa para o navegador edge, a qual contenha o conteudo desse input: {produto}" )
+        url_ia = analisar(f"Por favor, crie uma url de pesquisa para o navegador bing, a qual contenha o conteudo desse input: {produto}" )
         url = url_ia.replace("```",'').strip()
         print(url)
         response = requests.get(url)
