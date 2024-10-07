@@ -4,7 +4,6 @@ from analisador import analisar
 from time import sleep
 
 def pesquisar_produto(produto):
-    if produto:
         #pesquisa = produto.split(" ")
         #url = f"https://www.bing.com/search?q={pesquisa[0]}+{pesquisa[1]}+{pesquisa[2]}"
         url_ia = analisar(f"Vou te enviar um exemplo de url de pesquisa de navegador. Por favor, adapte o input que vou te mandar a esse exemplo de link. Exemplo:'https://www.bing.com/search?q=celulares. input: {produto}" )
