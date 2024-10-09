@@ -4,10 +4,10 @@ from analisador import analisar
 from time import sleep
 
 def pesquisar_produto(produto):
-        #pesquisa = produto.split(" ")
-        #url = f"https://www.bing.com/search?q={pesquisa[0]}+{pesquisa[1]}+{pesquisa[2]}"
-        url_ia = analisar(f"Por favor, crie uma url de pesquisa para o navegador bing, a qual contenha o conteudo desse input: {produto}.Retorne apenas o link, sem aspas, ou outros caracteres." )
-        url = url_ia.replace("```",'').strip()
+        pesquisa = produto.split(" ")
+        url = f"https://www.bing.com/search?q={pesquisa[0]}+{pesquisa[0:]}"
+        #url_ia = analisar(f"Por favor, crie uma url de pesquisa para o navegador bing, a qual contenha o conteudo desse input: {produto}.Retorne apenas o link, sem aspas, ou outros caracteres." )
+        #url = url_ia.replace("```",'').strip()
         response = requests.get(url)
         soup = BeautifulSoup(response.content, "html.parser")
 
