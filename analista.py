@@ -8,7 +8,7 @@ def pesquisar_produto(produto):
         pesquisa = produto.split(" ")
         for item in pesquisa:
                 url_base += f"+{item}"
-        pesquisa2 = produto.split("")
+        pesquisa2 = produto.split(" ")
         url = f"https://www.bing.com/search?q={produto2[0]}+{produto2[1]}"
         #url_ia = analisar(f"Por favor, crie uma url de pesquisa para o navegador bing, a qual contenha o conteudo desse input: {produto}.Retorne apenas o link, sem aspas, ou outros caracteres." )
         #url = url_ia.replace("```",'').strip()
