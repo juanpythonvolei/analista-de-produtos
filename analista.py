@@ -29,7 +29,7 @@ def acessar_links(links):
             lista_paginas.append(pagina_item)
         except:
             print('não foi possível acessar esse link')
-       
+    st.write(lista_paginas)   
     return lista_paginas
 def resposta(lista_paginas):
     lista_infos = []   
@@ -43,7 +43,7 @@ def resposta(lista_paginas):
             sleep(1.5)
         except:
             pass
-    st.write(lista_infos)
+    
     try:
         return analisar(f"Você é um analisador de produtos e sua função é me ajudar a selecionar o melhor local de compra e o melhor produto a ser selecionado. Te apresentarei uma lista de informações referentes a um produto, vindas de sites e vendedores diferentes. Por favor, retorne para mim a sua avaliação  de qual é o produto mais vantajoso o vendedor desses produto e o site no qual ele está hospedado bem como seu link de acesso. Além disso, elabore uma tabela com os demais produtos e vendedores, elencando-os do mais barato para o mais caro.",str(lista_infos))
     except:
