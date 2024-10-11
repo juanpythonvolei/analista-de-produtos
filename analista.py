@@ -4,7 +4,11 @@ from analisador import analisar
 from time import sleep
 
 def pesquisar_produto(produto):
-        url = f"https://www.bing.com/search?q={produto}"
+        url = f"https://www.bing.com/search?q="
+        pesquisa = produto.split(' ')
+        for i,enumerate(pesquisa):
+                url = url += f"+{i}"
+        url = f"https://www.bing.com/search?q={produto[0]}+{produto[1]}"
         #url_ia = analisar(f"Por favor, crie uma url de pesquisa para o navegador bing, a qual contenha o conteudo desse input: {produto}.Retorne apenas o link, sem aspas, ou outros caracteres." )
         #url = url_ia.replace("```",'').strip()
         response = requests.get(url)
