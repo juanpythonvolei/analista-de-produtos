@@ -30,6 +30,7 @@ def acessar_links(links):
             lista_paginas.append(pagina_item)
         except:
             print('não foi possível acessar esse link')
+    st.write(lista_paginas)    
     return lista_paginas
 def resposta(lista_paginas):
     lista_infos = []   
