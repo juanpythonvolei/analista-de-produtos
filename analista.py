@@ -12,6 +12,7 @@ def pesquisar_produto(produto):
         url = f"https://www.bing.com/search?q={pesquisa2[0]}+{pesquisa2[1]}"
         #url_ia = analisar(f"Por favor, crie uma url de pesquisa para o navegador bing, a qual contenha o conteudo desse input: {produto}.Retorne apenas o link, sem aspas, ou outros caracteres." )
         #url = url_ia.replace("```",'').strip()
+        st.write(url)
         response = requests.get(url)
         soup = BeautifulSoup(response.content, "html.parser")
 
