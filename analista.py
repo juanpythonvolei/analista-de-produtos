@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from analisador import analisar
 from time import sleep
-
+import streamlit as st
 def pesquisar_produto(produto):
         url_base =  f"https://www.bing.com/search?q="
         pesquisa = produto.split(" ")
